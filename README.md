@@ -19,3 +19,9 @@ docker-compose down
 ````
 curl http://localhost:8090/rat
 ````
+
+## debug
+Just add Run/Debug config 
+![plot](./readme.img/debug-settings.png)
+
+then run debug

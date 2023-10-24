@@ -7,8 +7,8 @@ services:
       - development
     ports:
       - "8090:8080"
-#      - "8081:8081"
-#      - "5005:5005"
+      - "8081:8081"
+      - "5005:5005"
     environment:
       # JVM config
       - JAVA_OPTIONS=-XX:+UseG1GC -XX:MaxRAMPercentage=75
