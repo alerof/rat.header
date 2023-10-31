@@ -16,10 +16,8 @@
 
 	<properties>
 		<java.version>11</java.version>
-		<base.image.version>3.3.0</base.image.version><!-- osa/java11-alpine:<version> -->
+<!--		<base.image.version>3.3.0</base.image.version>-->
 
-<!--		<docker.maintainer>wkg-gpo-embassy-support@wolterskluwer.com</docker.maintainer>-->
-<!--		<docker.pushRegistry>docker-prod.wolterskluwer.io</docker.pushRegistry>-->
 		<micro-artifact.final-name>rat-header</micro-artifact.final-name>
 	</properties>
 
@@ -140,8 +138,8 @@
 							<images>
 								<image>
 									<alias>${project.artifactId}</alias>
-									<name>embassy/${project.artifactId}:${project.version}</name>
-									<name>embassy/${project.artifactId}:${project.version}</name>
+									<name>alaerof/${project.artifactId}:${project.version}</name>
+									<name>alaerof/${project.artifactId}:${project.version}</name>
 									<build>
 										<cleanup>true</cleanup>
 										<dockerFileDir>${project.build.directory}/docker/${project.version}/build

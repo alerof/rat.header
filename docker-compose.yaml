@@ -2,11 +2,11 @@ version: '3.3'
 services:
 
   rat:
-    image: embassy/rat-header:latest
+    image: alaerof/rat-header:latest
     networks:
       - development
     ports:
-      - "8090:8080"
+      - "8080:8080"
       - "8081:8081"
       - "5005:5005"
     environment:

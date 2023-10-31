@@ -13,11 +13,14 @@ docker-compose up
 stop container
 ````
 ctrl+C
+````
+remove container
+````
 docker-compose down
 ````
 ## test
 ````
-curl http://localhost:8090/rat
+curl http://localhost:8080/rat
 ````
 
 ## debug
