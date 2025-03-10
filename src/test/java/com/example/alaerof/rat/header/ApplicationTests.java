@@ -1,4 +1,4 @@
-package com.alaerof.rat.header;
+package com.example.alaerof.rat.header;
 
 import org.junit.jupiter.api.Test;
 import org.springframework.boot.test.context.SpringBootTest;
