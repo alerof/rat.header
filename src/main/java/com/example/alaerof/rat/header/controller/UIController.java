@@ -1,4 +1,4 @@
-package com.alaerof.rat.header.controller;
+package com.example.alaerof.rat.header.controller;
 
 import lombok.extern.slf4j.Slf4j;
 import org.springframework.beans.factory.annotation.Value;

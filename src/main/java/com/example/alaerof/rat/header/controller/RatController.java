@@ -1,6 +1,6 @@
-package com.alaerof.rat.header.controller;
+package com.example.alaerof.rat.header.controller;
 
-import com.alaerof.rat.header.model.Rat;
+import com.example.alaerof.rat.header.model.Rat;
 import lombok.extern.slf4j.Slf4j;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.PostMapping;

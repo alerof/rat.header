@@ -1,4 +1,4 @@
-package com.alaerof.rat.header.model;
+package com.example.alaerof.rat.header.model;
 
 import lombok.AllArgsConstructor;
 import lombok.Builder;

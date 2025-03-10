@@ -5,22 +5,19 @@
 	<parent>
 		<groupId>org.springframework.boot</groupId>
 		<artifactId>spring-boot-starter-parent</artifactId>
-		<version>2.7.0</version>
+		<version>3.4.3</version>
 		<relativePath/> <!-- lookup parent from repository -->
 	</parent>
-	<groupId>com.alaerof</groupId>
-	<artifactId>rat-header</artifactId>
+	<groupId>com.example.alaerof</groupId>
+	<artifactId>rat.header</artifactId>
 	<version>0.0.1-SNAPSHOT</version>
-	<name>rat-header</name>
-	<description>Demo project for Spring Boot</description>
-
+	<name>rat.header</name>
+	<description>Demo project for Spring Boot Web App + Docker</description>
 	<properties>
-		<java.version>11</java.version>
-<!--		<base.image.version>3.3.0</base.image.version>-->
-
+		<java.version>17</java.version>
+		<project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
 		<micro-artifact.final-name>rat-header</micro-artifact.final-name>
 	</properties>
-
 	<dependencies>
 		<dependency>
 			<groupId>org.springframework.boot</groupId>
@@ -29,6 +26,18 @@
 		<dependency>
 			<groupId>org.springframework.boot</groupId>
 			<artifactId>spring-boot-starter-thymeleaf</artifactId>
+		</dependency>
+		<dependency>
+			<groupId>org.springframework.boot</groupId>
+			<artifactId>spring-boot-docker-compose</artifactId>
+			<scope>runtime</scope>
+			<optional>true</optional>
+		</dependency>
+		<dependency>
+			<groupId>jakarta.servlet</groupId>
+			<artifactId>jakarta.servlet-api</artifactId>
+			<version>6.1.0</version>
+			<scope>provided</scope>
 		</dependency>
 		<dependency>
 			<groupId>org.projectlombok</groupId>
@@ -41,7 +50,6 @@
 			<scope>test</scope>
 		</dependency>
 	</dependencies>
-
 
 	<build>
 		<finalName>${micro-artifact.final-name}</finalName>
@@ -63,7 +71,7 @@
 					</execution>
 				</executions>
 				<configuration>
-					<mainClass>com.alaerof.rat.header.Application</mainClass>
+					<mainClass>com.example.alaerof.rat.header.Application</mainClass>
 				</configuration>
 			</plugin>
 		</plugins>
@@ -131,9 +139,9 @@
 					<plugin>
 						<groupId>io.fabric8</groupId>
 						<artifactId>docker-maven-plugin</artifactId>
-						<version>0.33.0</version>
+						<version>0.45.0</version>
 						<configuration>
-<!--							<pushRegistry>${docker.pushRegistry}</pushRegistry>-->
+							<!--							<pushRegistry>${docker.pushRegistry}</pushRegistry>-->
 							<verbose>true</verbose>
 							<images>
 								<image>
@@ -160,18 +168,10 @@
 									<goal>build</goal>
 								</goals>
 							</execution>
-<!--							<execution>-->
-<!--								<id>push-images</id>-->
-<!--								<phase>deploy</phase>-->
-<!--								<goals>-->
-<!--									<goal>push</goal>-->
-<!--								</goals>-->
-<!--							</execution>-->
 						</executions>
 					</plugin>
 				</plugins>
 			</build>
 		</profile>
 	</profiles>
-
 </project>
