@@ -1,7 +1,7 @@
 services:
 
   rat:
-    image: alaerof/rat-header:latest
+    image: docker.io/alaerof/rat.header:latest
     networks:
       - development
     ports:
